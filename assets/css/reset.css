@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth; /*scroll suavizado*/
+}
+
+body{
+    min-height: 100vh; /*100% de la altura vertical de la pagina*/
+    scroll-behavior: smooth; /*scroll suavizado*/
+    text-rendering: optimizeSpeed; /*renderiza las fuentes mas rapido*/
+    line-height: 1.5;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    display: block; /*para manipularlos facilmente*/
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit; /* hereda*/
+}
+
+img, video, iframe, picture, figure{
+    max-width: 100%;
+    display: block; /*para manipularlos facilmente*/
+}
+
+p a{
+    display: inline;
+}
+
+form, input, select, textarea, button, label{
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit; /* hereda*/
+}
