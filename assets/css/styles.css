@@ -16,12 +16,13 @@
     --color-borders: #e3e6e9;
     --color-contact: #5956e9;
     --color-text-contact: #ffdc60;
+    --color-navbar: #fff;
 }
 
 /*ESTILOS GENERALES*/
 
 html{
-    font-size: 10px;
+    font-size: 62.5%; /*equivalente a 10rem*/
     overflow-x: hidden;
 }
 
@@ -54,7 +55,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--color-secundary);
+    background-color: var(--color-navbar);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -224,7 +225,7 @@ body{
 
 .layout__banner{
     position: relative;
-    margin: 0 3rem;
+    margin: 5rem 3rem;
     width: calc(100% - 6rem);
     padding: 15rem 0 20rem 10rem;
     min-height: 60rem;
@@ -463,6 +464,7 @@ body{
 
 .services__service{
     width: 33.333%;
+    height: 30rem;
     padding: 5rem 4rem;
     padding-bottom: 3rem;
     border-radius: 3rem;
@@ -563,6 +565,7 @@ body{
     position: absolute;
     z-index: -1;
     pointer-events: none;
+    opacity: 0.2;
 }
 
 .service-shapes--shape1{
@@ -776,7 +779,6 @@ body{
 .layout__reviews{
     position: relative;
     padding: 14rem 10rem;
-    background-color: var(--color-bg-projects);
     z-index: 1;
 }
 
@@ -912,7 +914,6 @@ body{
     position: relative;
     padding: 14rem 10rem;
     z-index: 1;
-    background-color: var(--color-bg-services);
 }
 
 .news__container{
@@ -1167,7 +1168,6 @@ body{
     position: relative;
     padding: 2rem 10rem 3rem;
     z-index: 1;
-    background-color: var(--color-secundary);
 
 }   
 
@@ -1210,6 +1210,7 @@ body{
     flex-wrap: nowrap;
     align-items: center;
     padding: 1rem;
+    padding-left: 2rem;
     box-shadow: 1px 10px 20px 2px rgba(0,0,0,0.06);
     border-radius: 20px;
 
@@ -1226,11 +1227,13 @@ body{
     border: none;
     outline: none;
     transition: all 0.3s ease-in-out;
+    background-color: transparent;
 }
 
 .left__form-control::placeholder{
     color: var(--color-text-description);
     text-transform: capitalize;
+    
 
 }
 
@@ -1284,6 +1287,7 @@ body{
     display: flex;
     border-top: 1px solid var(--color-borders);
     padding: 2.5rem 0;
+    margin-top: 10rem;
 }
 
 .footer__copyright{
@@ -1345,10 +1349,7 @@ body{
     width: 5rem;
     border: none;
     border-radius: 3.2rem;
-}
-
-.menu-mobile{
-    display: none;
+    cursor: pointer;
 }
 
 .burger{
@@ -1356,3 +1357,132 @@ body{
     font-size: 2.5rem;
 }
 
+.menu-mobile{
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    width: 30rem;
+    height: 100%;
+    z-index: 2000;
+    background-color: var(--color-secundary);
+    left: -300px;
+    top: 0;
+    padding: 5rem 1rem;
+    padding-top: 0;
+    box-shadow: 0px 0px 85px -35px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    transition: all 500ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.menu-mobile--show{
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+}
+
+.menu-mobile__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rem 0rem;
+    z-index: 100;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--color-borders);
+    
+
+}
+
+.menu-mobile__container-logo{
+    width: 15rem;
+}
+
+.menu-mobile__close{
+    background-color: transparent;
+    height: 3rem;
+    width: 3rem;
+    border: 2px solid var(--color-text-description);
+    border-radius: 1rem;
+    color: var(--color-text-description);
+    font-size: 1.6rem;
+}
+
+.menu-mobile__nav{
+    display: block;
+    height: 100%;
+    overflow: auto;
+}
+
+.menu-mobile__item{
+    position: relative;
+    border-bottom: 1px solid var(--color-borders);
+    margin: 0 1rem;
+}
+
+.menu-mobile__title{
+    position: relative;
+    height: 5rem;
+    line-height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-text-body);
+    font-weight: 500;
+}
+
+.nav__icon{
+    font-size: 1.4rem;
+}
+
+.menu-mobile__submenu-mobile{
+    display: none;
+    visibility: visible;
+    opacity: 1;
+    padding: 0;
+    min-width: 100%;
+    padding-bottom: 1rem;
+    
+}
+.submenu-mobile__title{
+    display: block;
+    text-decoration: none;
+    position: relative;
+    padding: 0.7rem 1rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 300;
+    color: var(--color-text-body);
+}
+
+
+/* ESTILOS DEL BOTON MODO OSCUTO */
+
+.switcher{
+    position: fixed;
+    top: 20rem;
+    left: 0;
+    background-color: var(--color-primary);
+    border-radius: 0 3rem 3rem 0;
+    padding: 1rem;
+    z-index: 5;
+}
+
+.switcher__btn{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: flex;
+
+}
+
+.switcher__icon-light,
+.switcher__icon-dark{
+    color: var(--color-secundary);
+    font-size: 1.8rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 3.6rem;
+}
+
+.switcher__icon-dark{
+    display: none;
+}

@@ -8,6 +8,7 @@
     <!-- cargar estilos -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- <link rel="stylesheet" href="./assets/css/dark.css"> -->
     <link rel="stylesheet" href="./assets/css/responsive.css">
 
     <!-- cargar fuentes e iconos -->
@@ -15,12 +16,29 @@
     <link rel="stylesheet" href="./assets/fonts/dmsans/dmsans.css">
 
     <!-- cargas JS -->
+    <script src="assets/js/menu-mobile.js"></script>
+    <script src="assets/js/dark.js"></script>
+
     <title>Agrencia de desarrollo web  </title>
 
 </head>
 <body>
 
-    <!-- MENU NAVEGACION RESPONSI -->
+
+    <!-- BOTON MODO OSCURO -->
+    <div class="switcher">
+        <button class="switcher__btn">
+            <span class="switcher__icon-light">
+                <i class="fa-solid fa-moon switcher__icon"></i>
+            </span>
+
+            <span class="switcher__icon-dark">
+                <i class="fa-solid fa-lightbulb switcher__icon"></i>
+            </span>
+        </button>
+    </div>
+
+    <!-- MENU NAVEGACION RESPONSIVE -->
     <div class="menu-mobile">
         <header class="menu-mobile__header">
             <div class="menu-mobile__container-logo">
@@ -28,20 +46,21 @@
                     <img src="assets/img/logo1.png" alt="Logo" class="menu-mobile__logo">
                 </a>
             </div>
-
             <button class="menu-mobile__close">
                 <i class="menu-mobile__icon-close fa-solid fa-xmark"></i>
             </button>
         </header>
+        
+        
 
         <div class="menu-mobile__body">
-            <nav class="navbar__nav">
+            <nav class="menu-mobile__nav">
                 <ul class="menu-mobile__list">
                     <li class="menu-mobile__item">
                         <a href="#" class="menu-mobile__title">Inicio</a>
                     </li>
 
-                    <li class="nav__item">
+                    <li class="menu-mobile__item">
                         <a href="#" class="menu-mobile__title">Servicios
                             <i class="fa-solid fa-chevron-down nav__icon"></i>
                         </a>
@@ -55,7 +74,7 @@
                                 </li>
 
                                 <li class="submenu-mobile__item">
-                                    <a href="#" class="submenu-mobile__title">Programacion</a>
+                                    <a href="#" class="submenu-mobile__title">Programación</a>
                                 </li>
 
                                 <li class="submenu-mobile__item">
@@ -69,7 +88,7 @@
                             </ul>
                         
                     </li>
-
+                
                     <li class="menu-mobile__item">
                         <a href="#" class="menu-mobile__title">Portafolio
                             <i class="fa-solid fa-chevron-down nav__icon"></i>
@@ -84,7 +103,7 @@
                                 </li>
 
                                 <li class="submenu-mobile__item">
-                                    <a href="#" class="submenu-mobile__title">Programacion</a>
+                                    <a href="#" class="submenu-mobile__title">Programación</a>
                                 </li>
 
                                 <li class="submenu-mobile__item">
@@ -100,21 +119,21 @@
                         <a href="#" class="menu-mobile__title">Blog
                             <i class="fa-solid fa-chevron-down nav__icon"></i>
                         </a>
-                            <ul class="menu-mobile__submenu">
+                            <ul class="menu-mobile__submenu-mobile">
                                 <li class="submenu-mobile__item">
-                                    <a href="#" class="submenu-mobile__link">Diseño Web</a>
+                                    <a href="#" class="submenu-mobile__title">Diseño Web</a>
                                 </li>
 
                                 <li class="submenu-mobile__item">
-                                    <a href="#" class="submenu-mobile__link">Diseño Web</a>
+                                    <a href="#" class="submenu-mobile__title">Diseño Web</a>
                                 </li>
 
                                 <li class="submenu-mobile__item">
-                                    <a href="#" class="submenu-mobile__link">Programacion</a>
+                                    <a href="#" class="submenu-mobile__title">Programación</a>
                                 </li>
 
                                 <li class="submenu-mobile__item">
-                                    <a href="#" class="submenu-mobile__link">Consultoria</a>
+                                    <a href="#" class="submenu-mobile__title">Consultoria</a>
                                 </li>
                             
                     
@@ -123,11 +142,11 @@
                     </li>
 
                     <li class="menu-mobile__item">
-                        <a href="#" class="menu-mobile__link">Equipo</a>
+                        <a href="#" class="menu-mobile__title">Equipo</a>
                     </li>
 
                     <li class="menu-mobile__item">
-                        <a href="#" class="menu-mobile__link">Contacto</a>
+                        <a href="#" class="menu-mobile__title">Contacto</a>
                     </li>
                 </ul>
             </nav>
